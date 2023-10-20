@@ -85,65 +85,6 @@ class _HomeState extends State<Home> {
           default: 
             return const SizedBox();
         }
-        // return Scaffold(
-        //   body: SafeArea(
-        //     child: Column(
-        //       children: <Widget>[
-        //         Flexible(
-        //           flex: 1,
-        //           child: Padding(
-        //             padding: const EdgeInsets.symmetric(
-        //                 vertical: 50, horizontal: 10),
-        //             child: Container(
-        //               color: AppColors.primaryColor,
-        //               child: Padding(
-        //                 padding: const EdgeInsets.fromLTRB(5, 30, 10, 30),
-        //                 child: ListView.builder(
-        //                   shrinkWrap: true,
-        //                   itemCount: 4,
-        //                   itemBuilder: (context, index) {
-        //                     return InkWell(
-        //                       onTap: () {
-        //                         homeBloc.add(HomeScreenClickedEvent());
-        //                       },
-        //                       child: Column(
-        //                         mainAxisAlignment: MainAxisAlignment.start,
-        //                         crossAxisAlignment: CrossAxisAlignment.start,
-        //                         children: [
-        //                           const SizedBox(
-        //                             height: 10,
-        //                           ),
-        //                           Row(
-        //                             children: [
-        //                               const Text("\u2022"),
-        //                               const SizedBox(width: 5),
-        //                               Text("Top gainers",
-        //                                   style: AppTextStyles.white60020),
-        //                             ],
-        //                           ),
-        //                           Padding(
-        //                             padding: const EdgeInsets.only(left: 10),
-        //                             child: Text('Bullish',
-        //                                 style: AppTextStyles.white40012.copyWith(
-        //                                     color: AppColors.greenColor)),
-        //                           ),
-        //                           const SizedBox(
-        //                             height: 15,
-        //                           ),
-        //                           const CustomDivider(color: Colors.white)
-        //                         ],
-        //                       ),
-        //                     );
-        //                   },
-        //                 ),
-        //               ),
-        //             ),
-        //           ),
-        //         ),
-        //       ],
-        //     ),
-        //   ),
-        // );
       },
     );
   }

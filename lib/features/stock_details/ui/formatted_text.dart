@@ -7,9 +7,10 @@ import 'package:stock_scan_parcer/features/stock_details/ui/sub_details.dart';
 import 'package:stock_scan_parcer/utils/text_styles.dart';
 
 class FormattedText extends StatelessWidget {
-  FormattedText({required this.criteria, super.key});
+  FormattedText({required this.criteria, required this.tag, super.key});
 
   final Criteria criteria;
+  final String tag;
 
   final StockBloc stockBloc = StockBloc();
 
@@ -40,7 +41,7 @@ class FormattedText extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => SetValue(values: stockBloc.getIndicatorData(criteria))));
                   } else {
                     Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SubDetails(values: stockBloc.getValuesData(criteria))));
+                      MaterialPageRoute(builder: (context) => SubDetails(values: stockBloc.getValuesData(criteria, tag))));
                   }
                     
                   

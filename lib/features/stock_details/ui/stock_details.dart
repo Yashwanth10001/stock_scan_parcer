@@ -63,7 +63,7 @@ class _StockDetailsState extends State<StockDetails> {
                                 ),
                                 child: Text(widget.stockData.tag,
                                     style: AppTextStyles.white40012
-                                        .copyWith(color: AppColors.greenColor)),
+                                        .copyWith(color: widget.stockData.color.contains('red') ? AppColors.redColor : widget.stockData.color.contains('green') ? AppColors.greenColor : AppColors.whiteColor)),
                               ),
                             ],
                           ),
@@ -80,7 +80,7 @@ class _StockDetailsState extends State<StockDetails> {
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  FormattedText(criteria: widget.stockData.criteria[index]),
+                                  FormattedText(criteria: widget.stockData.criteria[index], tag: widget.stockData.tag),
                                   index < widget.stockData.criteria.length - 1
                                       ? const Padding(
                                           padding: EdgeInsets.only(
