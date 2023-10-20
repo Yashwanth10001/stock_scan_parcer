@@ -19,6 +19,7 @@ class _StockDetailsState extends State<StockDetails> {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -29,7 +30,7 @@ class _StockDetailsState extends State<StockDetails> {
                 padding:
                     const EdgeInsets.symmetric(vertical: 50, horizontal: 10),
                 child: Container(
-                  height: 450,
+                  height: screenHeight * 0.5,
                   color: AppColors.primaryColor,
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(15, 15, 0, 40),

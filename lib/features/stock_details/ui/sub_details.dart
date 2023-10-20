@@ -11,11 +11,12 @@ class SubDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
         body: Padding(
             padding: const EdgeInsets.symmetric(vertical: 100, horizontal: 10),
             child: Container(
-              height: 450,
+              height: screenHeight * 0.5,
               color: AppColors.primaryColor,
               child: ListView.builder(
                 itemCount: values.length,

@@ -12,12 +12,13 @@ class SetValue extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
     TextEditingController textEditingController = TextEditingController(text: values[2].toString());
     return Scaffold(
         body: Padding(
             padding: const EdgeInsets.symmetric(vertical: 100, horizontal: 10),
             child: Container(
-              height: 450,
+              height: screenHeight * 0.5,
               color: AppColors.primaryColor,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
